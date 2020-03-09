@@ -1,0 +1,405 @@
+/*字体*/
+@font-face {
+  font-family: f1;
+  src: url("../font/f1.ttf");
+}
+/*css reset 开始*/
+* {
+  margin: 0;
+}
+html,
+body {
+  height: 100%;
+  overflow: hidden;
+  margin: 0px;
+}
+html h1,
+body h1,
+html h2,
+body h2,
+html h3,
+body h3,
+html h4,
+body h4,
+html h5,
+body h5,
+html h6,
+body h6,
+html p,
+body p,
+html ul,
+body ul,
+html li,
+body li {
+  padding: 0px;
+  font: 14px "微软雅黑";
+}
+a {
+  text-decoration: none;
+  display: block;
+}
+li {
+  list-style: none;
+}
+img {
+  display: block;
+}
+/*css reset 结束*/
+/*common css 开始*/
+.clearfix {
+  *zoom: 1;
+}
+.clearfix:after {
+  content: "";
+  display: block;
+  clear: both;
+}
+/*common css 结束*/
+/*头部样式 开始*/
+#head .headMain {
+  width: 1100px;
+  height: 80px;
+  background: white;
+  margin: 0 auto;
+}
+#head .headMain > .logo {
+  float: left;
+  margin-top: 30px;
+  font-family: "Courier New", Courier, monospace;
+  font-size: 34px;
+}
+#head .headMain > .nav {
+  font-size: 24px;
+  float: right;
+  margin-top: 50px;
+}
+#head .headMain > .nav > .list > li {
+  float: left;
+  margin-left: 40px;
+  position: relative;
+}
+#head .headMain > .nav > .list > li .up {
+  color: #009ee0;
+  position: absolute;
+  width: 0;
+  overflow: hidden;
+  transition: 1s width;
+  height: 19.2px;
+}
+#head .headMain > .nav > .list > li:hover .up {
+  height: 19.2px;
+  width: 100%;
+}
+#head .headMain > .arrow {
+  width: 21px;
+  height: 11px;
+  background: url(../img/menuIndicator.png);
+  position: absolute;
+  left: 50%;
+  bottom: -11px;
+  transition: 1s left;
+  z-index: 2;
+}
+/*头部样式 结束*/
+/*开机动画*/
+#mask {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  z-index: 100;
+}
+#mask .up {
+  width: 100%;
+  height: 50%;
+  background: deepskyblue;
+  transition: 1s height;
+}
+#mask .down {
+  width: 100%;
+  height: 50%;
+  background: deepskyblue;
+  transition: 1s height;
+  position: absolute;
+  bottom: 0;
+}
+#mask .line {
+  height: 4px;
+  width: 0;
+  background: white;
+  position: absolute;
+  left: 0;
+  top: 50%;
+  margin-top: -2px;
+  z-index: 101;
+  transition: 1s width;
+}
+/*内容区样式 开始*/
+#content {
+  background: gray;
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+}
+#content .list {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  transition: 1s top;
+}
+#content .list > li {
+  position: relative;
+  background-position: 50% 50%!important;
+}
+#content .list > li > div {
+  width: 1100px;
+  height: 520px;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+}
+#content .list > li > section {
+  width: 1100px;
+  height: 520px;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+}
+#content .list > .home {
+  background: url(../img/bg1.jpg) no-repeat;
+}
+#content .list > .works {
+  background: url(../img/bg3.jpg) no-repeat;
+}
+#content .list > .about {
+  background: url(../img/bg4.jpg) no-repeat;
+}
+#content .list > .team {
+  background: url(../img/bg5.jpg) no-repeat;
+}
+/*内容区样式结束*/
+/*专业技能开始*/
+/*武汉加油 开始*/
+#content .list > .wuhan {
+  position: relative;
+  right: 0px;
+  transition: right 4s;
+}
+#content .list > .wuhan:hover {
+  right: 1420px;
+}
+/*武汉加油 结束*/
+#content .list > .home2 {
+  background: url(../img/bg1.jpg);
+  width: 100%;
+  height: 100%;
+}
+#content .list > .home2 .left {
+  position: absolute;
+  width: 837px;
+  height: 437px;
+  left: 3%;
+  margin-top: 3%;
+  z-index: 1;
+}
+#content .list > .home2 .left .pics {
+  width: 100%;
+  height: 100%;
+}
+#content .list > .home2 .left .pics li {
+  float: left;
+  margin-left: 20px;
+  transition: 1s;
+}
+#content .list > .home2 .left .pics li .p1 {
+  transform: translateY(0px);
+  position: relative;
+  left: 80px;
+}
+#content .list > .home2 .left .pics li .p2 {
+  transform: translateY(0px);
+  position: relative;
+  left: 140px;
+}
+#content .list > .home2 .left .pics li .p3 {
+  transform: translateY(0px);
+  position: relative;
+  left: 140px;
+}
+#content .list > .home2 .left .pics li p {
+  font-size: 14px;
+  text-align: center;
+  margin: 20px 0;
+  text-align: left;
+}
+#content .list > .home2 .bg {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+/*项目经验开始*/
+#content > .list > .course {
+  background: url(../img/bg2.jpg) no-repeat;
+  z-index: 2;
+}
+#content > .list > .course .course1 {
+  margin: 0 auto;
+  text-align: center;
+}
+#content > .list > .course .course3 {
+  width: 480px;
+  margin: 0 auto;
+  right: 50px ;
+  top: 70px;
+}
+#content > .list > .course .course3 .line {
+  position: absolute;
+  top: -7px;
+  width: 9px
+     ;
+  height: 410px;
+  background: url(../img/plus_row.png) no-repeat;
+}
+#content > .list > .course .course3 .line:nth-of-type(1) {
+  left: -5px;
+}
+#content > .list > .course .course3 .line:nth-of-type(2) {
+  left: 115px;
+}
+#content > .list > .course .course3 .line:nth-of-type(3) {
+  left: 235px;
+}
+#content > .list > .course .course3 .line:nth-of-type(4) {
+  left: 355px;
+}
+#content > .list > .course .course3 .item {
+  float: left;
+  width: 240px;
+  height: 180px;
+  position: relative;
+  perspective: 500px;
+  transform-style: preserve-3d;
+  top: 50px;
+}
+#content > .list > .course .course3 .program1 {
+  right: 10px;
+}
+#content > .list > .course .course3 .program2 {
+  left: 10px;
+}
+#content > .list > .course .course3 .program3 {
+  right: 10px;
+  top: 70px;
+}
+#content > .list > .course .course3 .program4 {
+  left: 10px;
+  top: 70px;
+}
+#content > .list > .course .course3 .item .face,
+#content > .list > .course .course3 .item .backFace {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  padding: 15px;
+  transition: 1s transform;
+}
+#content > .list > .course .course3 .item .backFace {
+  background-position: 50% 50%!important;
+}
+#content > .list > .course .course3 .item:nth-of-type(1) .backFace {
+  background: url(../img/waimai2.JPG) no-repeat;
+  background-size: 100% 100%;
+}
+#content > .list > .course .course3 .item:nth-of-type(2) .backFace {
+  background: url(../img/ego.JPG) no-repeat;
+  background-size: 100% 100%;
+}
+#content > .list > .course .course3 .item:nth-of-type(3) .backFace {
+  background: url(../img/waimai1.JPG) no-repeat;
+  background-size: 100% 100%;
+}
+#content > .list > .course .course3 .item:nth-of-type(4) .backFace {
+  background: url(../img/ego2.JPG) no-repeat;
+  background-size: 100% 100%;
+}
+#content > .list > .course .course3 .item .face {
+  transform: rotateY(180deg);
+  backface-visibility: hidden;
+  background: #009ee0;
+  color: white;
+}
+#content > .list > .course .course3 .item:hover .face {
+  transform: rotateY(360deg);
+}
+#content > .list > .course .course3 .item:hover .backFace {
+  transform: rotateY(180deg);
+}
+/*项目经验*/
+/*个人资料*/
+#content > .list > .works > div {
+  margin: auto;
+  width: 810px;
+  height: 540px;
+}
+#content > .list > .works > div .postcard {
+  margin: auto;
+  height: 100%;
+  width: 100%;
+}
+#content > .list > .works > div ul .name {
+  right: 425px;
+  top: 255px;
+}
+#content > .list > .works > div ul .phone {
+  top: 290px;
+  right: 310px;
+}
+#content > .list > .works > div ul .mail {
+  top: 355px;
+  right: 10px;
+  left: 47px;
+}
+#content > .list > .works > div ul .area {
+  top: 320px;
+  right: 135px;
+}
+#content > .list > .works > div ul .number {
+  right: 17px;
+  bottom: 37px;
+  text-align: left;
+  letter-spacing: 5px;
+}
+#content > .list > .works > div ul span {
+  z-index: 4;
+  position: relative ;
+  float: right;
+  font: 25px f1;
+}
+/*个人资料*/
+/*小圆点*/
+#content > .dot {
+  position: fixed;
+  right: 10px;
+  top: 50%;
+  z-index: 3;
+}
+#content > .dot > li {
+  width: 10px;
+  height: 10px;
+  border: 5px solid pink;
+  margin-top: 10px;
+  border-radius: 50% ;
+}
+#content > .dot > li.active {
+  background: white;
+}
+/*# sourceMappingURL=css.css.map */

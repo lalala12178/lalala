@@ -1,0 +1,354 @@
+
+
+
+
+
+/*字体*/
+@font-face {
+font-family: f1;
+src: url("../font/f1.ttf");
+}
+
+
+
+/*css reset 开始*/
+*{
+  margin: 0;
+}
+html,body{
+  height: 100%;
+  overflow: hidden;
+  margin: 0px;
+ h1,h2,h3,h4,h5,h6,p,ul,li{
+
+   padding: 0px;
+   font: 14px  "微软雅黑";
+   }
+ }
+    a{
+      text-decoration: none;
+      display: block;
+    }
+    li{list-style: none;}
+    img{display: block;}
+/*css reset 结束*/
+
+/*common css 开始*/
+.clearfix{*zoom: 1;}
+.clearfix:after{content: "";display: block;clear: both;}
+/*common css 结束*/
+
+
+
+/*头部样式 开始*/
+#head .headMain{
+  width: 1100px;
+  height: 80px;
+  background: white;
+  margin: 0 auto;
+  > .logo{
+    float: left;
+    margin-top: 30px;
+    font-family: "Courier New", Courier, monospace;
+    font-size: 34px;
+  }
+  > .nav{
+    font-size: 24px;
+    float: right;
+    margin-top: 50px;
+    >.list{
+      > li{
+        float: left;
+        margin-left: 40px;
+        position: relative;
+
+        .up{
+          color:#009ee0 ;
+          position: absolute;
+          width: 0;
+          overflow: hidden;
+          transition:1s width;
+          height: 19.2px;
+        }
+        &:hover .up{
+          height: 19.2px;
+          width: 100%;
+        }
+      }
+    }
+
+  }
+  >.arrow{width: 21px; height: 11px;background: url(../img/menuIndicator.png);
+    position: absolute;left: 50%;bottom: -11px;transition:1s left;
+    z-index: 2;}
+}
+/*头部样式 结束*/
+/*开机动画*/
+#mask{height: 100%;width:100%;position: absolute;z-index: 100;}
+#mask .up{width: 100%;height: 50%;background: deepskyblue;transition:1s height;}
+#mask .down{width: 100%;height: 50%;background: deepskyblue;transition:1s height;
+  position: absolute;bottom: 0;
+}
+#mask .line{height: 4px;width: 0;background: white;
+  position: absolute;left:0;top:50%;margin-top:-2px;z-index: 101;
+  transition:1s width;}
+
+
+
+
+/*内容区样式 开始*/
+
+#content{
+  background: gray;
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  .list{
+    position: absolute;
+    left: 0;
+    top:0;
+    width: 100%;
+    transition:1s top;
+    > li{
+      position: relative;
+      background-position:50% 50%!important;
+      > div{
+        width: 1100px;
+        height: 520px;
+        //background: pink;
+        position: absolute;left: 0;right: 0;top: 0;bottom: 0;
+        margin: auto;
+      }
+      > section{
+        width: 1100px;
+        height: 520px;
+        //background: pink;
+        position: absolute;left: 0;right: 0;top: 0;bottom: 0;
+        margin: auto;
+      }
+    }
+    > .home{background: url(../img/bg1.jpg) no-repeat;}
+
+    > .works{background: url(../img/bg3.jpg) no-repeat;}
+    > .about{background: url(../img/bg4.jpg) no-repeat;}
+    > .team{background: url(../img/bg5.jpg) no-repeat;}
+  }
+}
+/*内容区样式结束*/
+/*专业技能开始*/
+/*武汉加油 开始*/
+#content .list >.wuhan{
+position: relative;
+  right: 0px;
+  transition:right 4s;
+
+}
+#content .list >.wuhan:hover{
+right: 1420px;
+}
+/*武汉加油 结束*/
+
+#content .list > .home2{
+  background: url(../img/bg1.jpg);
+  width: 100%;
+  height: 100%;
+
+  .left{position: absolute;
+    width: 837px;
+    height: 437px;
+    left: 3%;
+    margin-top: 3%;
+    z-index: 1;
+    .pics{
+      width: 100%;
+      height: 100%;
+      li{
+        float: left;
+        margin-left: 20px;
+        transition: 1s;
+        .p1{transform: translateY(0px);position: relative;left: 80px}
+        .p2{transform: translateY(0px);position: relative;left: 140px}
+        .p3{transform: translateY(0px);position: relative;left: 140px}
+
+        p{font-size: 14px;text-align: center;margin: 20px 0;text-align: left}
+
+
+      }
+    }
+  }
+}
+
+
+
+
+
+
+
+#content .list > .home2 .bg{ position: absolute; bottom: 0; right: 0;}
+
+
+/*项目经验开始*/
+
+
+#content > .list > .course{
+  background: url(../img/bg2.jpg) no-repeat;
+  z-index: 2;
+  .course1{margin: 0 auto;text-align: center;}
+  .course3{
+    width: 480px;
+    //position: absolute;
+    margin: 0 auto;
+    right:50px ;
+    top: 70px;
+     .line{
+      position: absolute;
+       top:-7px;
+       width: 9px
+     ;height: 410px;
+      background: url(../img/plus_row.png) no-repeat;
+     }
+    .line:nth-of-type(1){left: -5px;}
+    .line:nth-of-type(2){left: 115px;}
+    .line:nth-of-type(3){left: 235px;}
+    .line:nth-of-type(4){left: 355px;}
+
+    .item {
+
+
+      float: left;
+      width: 240px;
+      height: 180px;
+      position: relative;
+      perspective: 500px;
+      transform-style: preserve-3d;
+      top: 50px;
+      //right: 50px;
+
+    }
+    .program1{
+
+      right: 10px;
+    }
+    .program2{
+      left: 10px;
+    }
+    .program3{
+      right: 10px;
+      top: 70px;
+    }
+    .program4{
+      left: 10px;
+      top: 70px;
+    }
+  }
+}
+
+
+
+#content > .list > .course .course3 .item .face,#content > .list > .course .course3 .item .backFace
+{position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  padding: 15px;
+  transition:1s transform;
+}
+#content > .list > .course .course3 .item .backFace{background-position: 50% 50%!important;}
+#content > .list > .course .course3 .item:nth-of-type(1) .backFace{
+  background: url(../img/waimai2.JPG) no-repeat;
+  background-size: 100% 100%;
+}
+#content > .list > .course .course3 .item:nth-of-type(2) .backFace{background: url(../img/ego.JPG) no-repeat;background-size: 100% 100%;}
+#content > .list > .course .course3 .item:nth-of-type(3) .backFace{background: url(../img/waimai1.JPG) no-repeat;background-size: 100% 100%;}
+#content > .list > .course .course3 .item:nth-of-type(4) .backFace{background: url(../img/ego2.JPG) no-repeat;background-size: 100% 100%;}
+#content > .list > .course .course3 .item .face{transform: rotateY(180deg);backface-visibility: hidden;
+  background: #009ee0;color: white;
+}
+
+#content > .list > .course .course3 .item:hover .face{transform: rotateY(360deg);}
+#content > .list > .course .course3 .item:hover .backFace{transform: rotateY(180deg);}
+
+/*项目经验*/
+/*个人资料*/
+
+#content > .list > .works >div{
+  margin: auto;
+  width: 810px;
+  height: 540px;
+  .postcard{
+    margin: auto;
+    height: 100%;
+    width: 100%;
+  }
+  ul>{
+    .name{
+      right: 425px;
+      top: 255px;
+
+    }
+    .phone{
+      top: 290px;
+      right: 310px;
+    }
+    .mail{
+        top: 355px;
+        right: 10px;
+        left: 47px;
+    }
+    .area{
+      top: 320px;
+      right: 135px;
+    }
+    .number{
+      right: 17px;
+      bottom: 37px;
+      text-align: left;
+      letter-spacing: 5px;
+    }
+
+
+    span{
+    z-index: 4;
+    position: relative ;
+    float: right;
+    font:25px f1;
+
+
+  }
+    }
+}
+
+
+/*个人资料*/
+
+/*小圆点*/
+#content > .dot{
+  position: fixed;
+  right: 10px;
+  top: 50%;
+  z-index: 3;
+  >li{
+    width: 10px;
+    height: 10px;
+    border: 5px solid pink;
+    margin-top: 10px;
+    border-radius:50% ;
+  }
+  >li.active{background: white;}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
